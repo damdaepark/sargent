@@ -1,5 +1,10 @@
 # Sargent
 
+[![PyPI](https://img.shields.io/pypi/v/sargent)](https://pypi.org/project/sargent/)
+[![Python](https://img.shields.io/pypi/pyversions/sargent)](https://pypi.org/project/sargent/)
+[![Platform](https://img.shields.io/badge/platform-Windows-blue)](https://pypi.org/project/sargent/#files)
+[![License](https://img.shields.io/badge/license-proprietary%20%28free%20for%20academic%20use%29-lightgrey)](https://github.com/damdaepark/sargent/blob/main/LICENSE)
+
 **Sargent is an integrated process systems engineering platform.** One desktop application covers the whole design
 loop of a chemical process: flowsheet simulation, heat integration, optimization, techno-economic and life cycle
 assessment, AI prediction of reactions and properties, and links to commercial simulators and to a physical plant.
@@ -35,7 +40,7 @@ assessment, AI prediction of reactions and properties, and links to commercial s
 
 ## Installation
 
-Python 3.12 to 3.15, Windows (64-bit). Linux builds will follow in a later release.
+Python 3.12 to 3.15, Windows (64-bit). Linux builds will follow in a later release. Package: [pypi.org/project/sargent](https://pypi.org/project/sargent/).
 
 ```
 pip install "sargent[gui]"
@@ -47,11 +52,11 @@ Sargent. Install and license them yourself to use the features that need them.
 
 ## License
 
-Sargent is proprietary software distributed as compiled packages only (see `LICENSE`).
+Sargent is proprietary software distributed as compiled packages only (see [LICENSE](https://github.com/damdaepark/sargent/blob/main/LICENSE)).
 
 - Free for academic research, teaching and personal non-commercial use.
 - Commercial use requires a separate license. Contact: https://github.com/damdaepark
-- Third-party components and their licenses: `THIRD_PARTY_NOTICES.md`.
+- Third-party components and their licenses: [THIRD_PARTY_NOTICES.md](https://github.com/damdaepark/sargent/blob/main/THIRD_PARTY_NOTICES.md).
 
 ## Citation
 
