@@ -1,0 +1,17 @@
+name: publish
+on:
+  release:
+    types: [published]
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - run: gh release download "${{ github.event.release.tag_name }}" -R "${{ github.repository }}" -p "*.whl" -D dist
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: test -n "$(ls dist/*.whl)" && ! ls dist | grep -v '\.whl$'
+      - uses: pypa/gh-action-pypi-publish@release/v1
