@@ -3,7 +3,10 @@
 Sargent is proprietary software (see LICENSE). It includes or uses the third-party components below, each under
 its own license. Nothing in the Sargent license restricts the rights you have under these licenses.
 
-## Included in the Sargent package
+## Reaction prediction models
+
+These components are part of the Sargent releases that include the reaction prediction models. They are not
+included in version 0.0.1.
 
 ### LocalTransform (reaction outcome prediction)
 - Copyright 2022 Shuan Chen
@@ -43,8 +46,7 @@ affiliated with either.
   distributed with Sargent; licensed and installed by you.
 - **PySide6 / Shiboken6 (Qt for Python)**: LGPL-3.0; installed separately by pip, not bundled.
 - Python dependencies installed by pip under their own (permissive) licenses: numpy, scipy, networkx, PyYAML,
-  Pyomo, matplotlib, openpyxl, pyodbc, RDKit, thermo, pandas, openai, anthropic, keyring, Markdown, pythonnet, Ray,
-  dill, periodictable, pywin32, Cython.
+  Pyomo, matplotlib, openpyxl, pyodbc, RDKit, thermo, pandas, openai, anthropic, keyring, Markdown, pythonnet, Ray.
 
 ## Apache License 2.0
 

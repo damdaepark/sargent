@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you publish results obtained with Sargent, please cite it as below. A paper describing Sargent is in preparation."
+title: "Sargent: an integrated process systems engineering platform"
+type: software
+authors:
+  - family-names: Park
+    given-names: Damdae
+version: 0.0.1
+date-released: 2026-10-11
+url: "https://github.com/damdaepark/sargent"
+repository-code: "https://github.com/damdaepark/sargent"
+license-url: "https://github.com/damdaepark/sargent/blob/main/LICENSE"
