@@ -6,7 +6,7 @@ its own license. Nothing in the Sargent license restricts the rights you have un
 ## Reaction prediction models
 
 These components are part of the Sargent releases that include the reaction prediction models. They are not
-included in version 0.0.1.
+included in version 0.1.
 
 ### LocalTransform (reaction outcome prediction)
 - Copyright 2022 Shuan Chen
