@@ -1,4 +1,4 @@
-# Sargent
+# <img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/sargent.png" alt="Sargent logo" width="48" align="top"> Sargent
 
 [![PyPI](https://img.shields.io/pypi/v/sargent)](https://pypi.org/project/sargent/)
 [![Python](https://img.shields.io/pypi/pyversions/sargent)](https://pypi.org/project/sargent/)
@@ -8,6 +8,7 @@
 **Sargent is an integrated process systems engineering platform.** One desktop application covers the whole design
 loop of a chemical process: flowsheet simulation, heat integration, optimization, techno-economic and life cycle
 assessment, AI prediction of reactions and properties, and links to commercial simulators and to a physical plant.
+It runs many simulations at once, on the cores of one computer or on a cluster.
 
 > **Version 0.1** is the first public build. It contains the simulator, the optimizers, the simulator links and the
 > AI assistant. Heat exchanger network synthesis, TEA / LCA and the AI prediction models are not included in this
@@ -20,7 +21,8 @@ assessment, AI prediction of reactions and properties, and links to commercial s
 | **Flowsheet simulation** | Sequential-modular solver with automatic or user-chosen tear streams (Wegstein, Broyden, direct substitution) and compiled property kernels | Included |
 | **Proxy run** | Solve the same flowsheet with Aspen Plus or DWSIM installed on your computer and bring the results and errors back; import and export Aspen Plus and DWSIM files | Included |
 | **Equation-oriented optimization** | Pyomo model of the converged flowsheet, solved with IPOPT | Included |
-| **Derivative-free optimization** | NSGA-II (multi-objective) or Bayesian optimization; cases run in parallel on local workers or a Ray cluster; Pareto and parallel-coordinate plots | Included |
+| **Derivative-free optimization** | NSGA-II (multi-objective) or Bayesian optimization; Pareto and parallel-coordinate plots | Included |
+| **Parallel simulation** | Case studies and optimization cases run simultaneously in worker processes of one computer or on a Ray cluster, each with Sargent, Aspen Plus or DWSIM | Included |
 | **Online connection** | TCP/IP connection to a reconfigurable plant (self-driving lab): module map, interlocks, wiring export. Links to PubChem, NIST Chemistry WebBook, Reaxys, SciFinder, Open Reaction Database and ASKCOS | Included (plant control in development) |
 | **Agentic AI** | In-app AI assistant that reads and edits the model, runs simulations and studies (OpenAI, Anthropic or a local OpenAI-compatible server, with your own API key), and an MCP server for external AI agents | Included |
 | **Heat exchanger network synthesis (HENS)** | Heat exchanger network of the solved flowsheet: matches, heat recovered, total annual cost | Not included |
@@ -38,17 +40,36 @@ assessment, AI prediction of reactions and properties, and links to commercial s
 - Property analysis: pure-component curves, Txy / Pxy, ternary residue-curve maps, azeotrope search, phase
   envelopes
 
+### Parallel simulation
+
+A case study (a grid or a list of input values) and the cases of an optimization are solved at the same time instead
+of one after another:
+
+- **Local**: worker processes on the cores of your computer.
+- **Cluster**: the nodes of a [Ray](https://www.ray.io/) cluster (several computers);
+  Sargent ships itself to the workers.
+
+| Simulator of the cases | Local workers | Ray cluster |
+|---|---|---|
+| Sargent | Yes | Every node |
+| Aspen Plus | Yes: one engine run per case (your license sets the number) | Windows nodes |
+| DWSIM | Yes: one DWSIM instance per worker | Nodes with DWSIM installed |
+
+Failed, unconverged or off-specification cases are flagged as infeasible; the results are shown as tables, Pareto
+fronts and parallel-coordinate plots.
+
 ## Installation
 
-Python 3.12 to 3.15, Windows (64-bit). Linux builds will follow in a later release. Package: [pypi.org/project/sargent](https://pypi.org/project/sargent/).
+Python 3.12 to 3.15 on Windows (64-bit); Linux builds follow in a later release. Package: [pypi.org/project/sargent](https://pypi.org/project/sargent/).
 
 ```
-pip install "sargent[gui]"
+pip install "sargent[gui]"              # the desktop application
+pip install "sargent[gui,parallel]"     # with Ray for cluster runs
 sargent
 ```
 
 Aspen Plus, DWSIM, optimization solvers (IPOPT and others) and life cycle inventory databases are not part of
-Sargent. Install and license them yourself to use the features that need them.
+Sargent. Install and license them yourself to use the features that need them. Aspen Plus runs on Windows only.
 
 ## License
 

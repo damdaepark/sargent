@@ -31,12 +31,13 @@ the original works are kept in this file.
 
 ## Trademarks
 
-PubChem, NIST Chemistry WebBook, Reaxys, CAS SciFinder, Open Reaction Database (ORD) and ASKCOS are names or
-trademarks of their respective owners (U.S. National Library of Medicine; National Institute of Standards and
-Technology; Elsevier B.V.; American Chemical Society; the ORD project; Massachusetts Institute of Technology). Their
+PubChem, NIST Chemistry WebBook, Reaxys, CAS SciFinder, Open Reaction Database (ORD), ASKCOS, Zauba and Alibaba are
+names or trademarks of their respective owners (U.S. National Library of Medicine; National Institute of Standards and
+Technology; Elsevier B.V.; American Chemical Society; the ORD project; Massachusetts Institute of Technology; Zauba
+Technologies; Alibaba Group). Their
 icons are shown in Sargent only as links to their web sites; Sargent is not affiliated with or endorsed by them.
-Aspen Plus is a trademark of Aspen Technology, Inc.; DWSIM is a project of Daniel Medeiros; Sargent is not
-affiliated with either.
+Aspen Plus is a trademark of Aspen Technology, Inc.; DWSIM is a project of Daniel Medeiros; openLCA is a product of
+GreenDelta GmbH; Sargent is not affiliated with any of them.
 
 ## Not included (used only when installed by you)
 
@@ -44,9 +45,11 @@ affiliated with either.
   run time (pythonnet) as an optional feature.
 - **Aspen Plus**, solvers (IPOPT, HSL, HiGHS, Gurobi, CBC) and life cycle inventory databases (e.g. ecoinvent): not
   distributed with Sargent; licensed and installed by you.
+- **openLCA** (MPL-2.0): not distributed with Sargent; the Evaluation tab opens an openLCA installed by you.
 - **PySide6 / Shiboken6 (Qt for Python)**: LGPL-3.0; installed separately by pip, not bundled.
 - Python dependencies installed by pip under their own (permissive) licenses: numpy, scipy, networkx, PyYAML,
-  Pyomo, matplotlib, openpyxl, pyodbc, RDKit, thermo, pandas, openai, anthropic, keyring, Markdown, pythonnet, Ray.
+  Pyomo, matplotlib, openpyxl, pyodbc, RDKit, thermo, pandas, openai, anthropic, keyring, Markdown, pythonnet, Ray,
+  dimorphite_dl (Apache-2.0; the protonation states of the pKa model).
 
 ## Apache License 2.0
 
