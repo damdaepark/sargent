@@ -34,10 +34,16 @@ It runs many simulations at once, on the cores of one computer or on a cluster.
 
 - Property methods: IDEAL, NRTL, WILSON, UNIQUAC, Peng-Robinson, Redlich-Kwong-Soave, Henry components, and
   electrolyte NRTL with an electrolyte wizard
-- Unit operations: MIXER, FSPLIT, SEP, HEATER, HEATX, FLASH2, RADFRAC, FILTER, PUMP, COMPR, VALVE, RSTOIC, REQUIL,
-  RCSTR, RPLUG and a Calculator block
+- Unit operations: MIXER, FSPLIT, SEP, HEATER, HEATX, FLASH2, FLASH3, RADFRAC, FILTER, DRYER, CRYSTALLIZER, PUMP,
+  COMPR, VALVE, RSTOIC, RYIELD, REQUIL, RGIBBS, RCSTR, RPLUG, a Calculator block and design specs
+- Material, heat and work streams; solids with particle size distributions
+- Property parameters: estimation from the molecular structure, and regression of parameters to your own data
 - Property analysis: pure-component curves, Txy / Pxy, ternary residue-curve maps, azeotrope search, phase
   envelopes
+
+What is new in 0.3: FLASH3, DRYER, CRYSTALLIZER, RYIELD and RGIBBS blocks; solids; heat and work streams; design
+specs; parameter regression; a monitor and a result window for equation-oriented optimization; the built-in
+documentation (F1).
 
 ### Parallel simulation
 
