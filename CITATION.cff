@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Park
     given-names: Damdae
-version: "0.1"
-date-released: 2026-10-11
+version: "0.3"
+date-released: 2026-10-18
 url: "https://github.com/damdaepark/sargent"
 repository-code: "https://github.com/damdaepark/sargent"
 license-url: "https://github.com/damdaepark/sargent/blob/main/LICENSE"

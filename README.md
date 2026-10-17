@@ -10,13 +10,13 @@ loop of a chemical process: flowsheet simulation, heat integration, optimization
 assessment, AI prediction of properties, and links to commercial simulators and to a physical plant.
 It runs many simulations at once, on the cores of one computer or on a cluster.
 
-> **Version 0.1** is the first public build. It contains the simulator, the optimizers, the simulator links and the
+> **Version 0.3** is the current public build. It contains the simulator, the optimizers, the simulator links and the
 > AI assistant. Heat exchanger network synthesis, TEA / LCA and the AI prediction models are not included in this
 > build; their buttons are shown but disabled. They will be enabled in a later release.
 
 ## Integrated features
 
-| Feature | What it does | 0.1 |
+| Feature | What it does | 0.3 |
 |---|---|---|
 | **Flowsheet simulation** | Sequential-modular solver with automatic or user-chosen tear streams (Wegstein, Broyden, direct substitution) and compiled property kernels | Included |
 | **Proxy run** | Solve the same flowsheet with Aspen Plus or DWSIM installed on your computer and bring the results and errors back; import and export Aspen Plus and DWSIM files | Included |

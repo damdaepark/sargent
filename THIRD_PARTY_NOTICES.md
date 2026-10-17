@@ -3,38 +3,12 @@
 Sargent is proprietary software (see LICENSE). It includes or uses the third-party components below, each under
 its own license. Nothing in the Sargent license restricts the rights you have under these licenses.
 
-## Reaction prediction models
-
-These components are part of the Sargent releases that include the reaction prediction models. They are not
-included in version 0.1.
-
-### LocalTransform (reaction outcome prediction)
-- Copyright 2022 Shuan Chen
-- Licensed under the Apache License, Version 2.0 (full text at the end of this file)
-- Sargent includes model weights and reaction templates derived from LocalTransform (the version taken locally),
-  ported to numpy and compiled; they were modified (converted and re-implemented) for Sargent.
-
-### LocalRetro (retrosynthesis prediction)
-- Copyright 2021 Shuan Chen
-- Licensed under the Apache License, Version 2.0 (full text at the end of this file)
-- Sargent includes model weights and reaction templates derived from the Apache-2.0 version of LocalRetro (obtained
-  in April 2024), ported to numpy and compiled; they were modified (converted and re-implemented) for Sargent.
-  Later upstream versions of LocalRetro use a different license and are not included.
-
-### USPTO reaction data
-- The reaction models above were trained on reactions extracted from United States patents (USPTO), released
-  under CC0 1.0 (public domain dedication).
-
-Apache License 2.0, section 4 (summary of the conditions met here): a copy of the license is included at the end of
-this file, the modified files carry notices that they were changed, and the copyright and attribution notices of
-the original works are kept in this file.
-
 ## Trademarks
 
-PubChem, NIST Chemistry WebBook, Reaxys, CAS SciFinder, Open Reaction Database (ORD), ASKCOS, Zauba and Alibaba are
-names or trademarks of their respective owners (U.S. National Library of Medicine; National Institute of Standards and
-Technology; Elsevier B.V.; American Chemical Society; the ORD project; Massachusetts Institute of Technology; Zauba
-Technologies; Alibaba Group). Their
+PubChem, NIST Chemistry WebBook, MolPort, Chemspace, Reaxys, CAS SciFinder, Open Reaction Database (ORD), ASKCOS, Zauba
+and Alibaba are names or trademarks of their respective owners (U.S. National Library of Medicine; National Institute of
+Standards and Technology; Molport SIA; Chemspace; Elsevier B.V.; American Chemical Society; the ORD project;
+Massachusetts Institute of Technology; Zauba Technologies; Alibaba Group). Their
 icons are shown in Sargent only as links to their web sites; Sargent is not affiliated with or endorsed by them.
 Aspen Plus is a trademark of Aspen Technology, Inc.; DWSIM is a project of Daniel Medeiros; openLCA is a product of
 GreenDelta GmbH; Sargent is not affiliated with any of them.
@@ -43,7 +17,7 @@ GreenDelta GmbH; Sargent is not affiliated with any of them.
 
 - **DWSIM** (GPL-3.0): not distributed with Sargent. Sargent can load the DLLs of a DWSIM installation of yours at
   run time (pythonnet) as an optional feature.
-- **Aspen Plus**, solvers (IPOPT, HSL, HiGHS, Gurobi, CBC) and life cycle inventory databases (e.g. ecoinvent): not
+- **Aspen Plus**, solvers (IPOPT, HSL, HiGHS, SCIP, Gurobi, CBC) and life cycle inventory databases (e.g. ecoinvent): not
   distributed with Sargent; licensed and installed by you.
 - **openLCA** (MPL-2.0): not distributed with Sargent; the Evaluation tab opens an openLCA installed by you.
 - **PySide6 / Shiboken6 (Qt for Python)**: LGPL-3.0; installed separately by pip, not bundled.
