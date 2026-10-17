@@ -7,7 +7,7 @@
 
 **Sargent is an integrated process systems engineering platform.** One desktop application covers the whole design
 loop of a chemical process: flowsheet simulation, heat integration, optimization, techno-economic and life cycle
-assessment, AI prediction of reactions and properties, and links to commercial simulators and to a physical plant.
+assessment, AI prediction of properties, and links to commercial simulators and to a physical plant.
 It runs many simulations at once, on the cores of one computer or on a cluster.
 
 > **Version 0.1** is the first public build. It contains the simulator, the optimizers, the simulator links and the
@@ -28,7 +28,6 @@ It runs many simulations at once, on the cores of one computer or on a cluster.
 | **Heat exchanger network synthesis (HENS)** | Heat exchanger network of the solved flowsheet: matches, heat recovered, total annual cost | Not included |
 | **Techno-economic analysis (TEA)** | CAPEX, OPEX, NPV and minimum selling price of the target product; tornado sensitivity | Not included |
 | **Life cycle assessment (LCA)** | Cradle-to-gate and cradle-to-grave impacts per kg of product; uncertainty from the choice of LCI datasets | Not included |
-| **Reaction prediction** | Forward prediction, retrosynthesis and reaction-network generation with trained graph neural networks | Not included |
 | **Property prediction** | Pure-component parameters from the molecular structure: Joback (included) and graph neural networks (not included) | Joback only |
 
 ### Simulator
