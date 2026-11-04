@@ -19,26 +19,149 @@ It runs many simulations at once, on the cores of one computer or on a cluster.
 Short clips of the desktop application (sped up). Clips marked *later release* show features that are not in the
 public build yet.
 
-| | |
-|---|---|
-| **AI assistant**: the assistant builds an acetone process step by step in the chat<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/02_ai_chat.gif" width="440"> | **Agentic AI**: the AI assistant builds and runs a process from a request<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/20_ai_chat_builds_process.gif" width="440"> |
-| **Edit and undo**: every edit of the flowsheet can be undone<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/03_edit_undo.gif" width="440"> | **Import and export**: open Aspen Plus and DWSIM files, write them back<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/04_import_export.gif" width="440"> |
-| **Built-in help (F1)**: the documentation of every block and method, with its equations<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/05_help.gif" width="440"> | **Units**: switch the unit set of the whole model instantly<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/31_flowsheeting_units.gif" width="440"> |
-| **Components**: find components in the databanks installed on your computer<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/06_components_define.gif" width="440"> | **Electrolyte wizard**: ions, salts and reactions of an electrolyte system<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/07_elec_wizard.gif" width="440"> |
-| **Property methods**: choose the base method of the model<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/34_property_method.gif" width="440"> | **Property parameters**: view, import and estimate the parameters (*GNN estimation: later release*)<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/10_property_parameters.gif" width="440"> |
-| **Property analysis**: pure-component curves, Txy / Pxy, azeotropes<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/11_property_analysis.gif" width="440"> | **Search by property**: screen molecules against property criteria<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/08_screening.gif" width="440"> |
-| **Portals**: links to public chemical databases and suppliers<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/09_portals.gif" width="440"> | **API order**: order requests to chemical suppliers through their APIs<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/19_order_api_dry_run.gif" width="440"> |
-| **Flowsheeting**: automatic layout and name suggestions<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/13_flowsheeting.gif" width="440"> | **Intellisense**: units and streams renamed by the naming convention<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/32_intellisense.gif" width="440"> |
-| **Reaction sets**: one Global check-box applies the chemistry to the whole model<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/27_reaction_define_global.gif" width="440"> | **Solver settings**: convergence options and the dedicated column solver<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/33_simulation_solver.gif" width="440"> |
-| **Proxy run**: run the same model with Aspen Plus or DWSIM installed on your computer<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/14_simulation_proxy.gif" width="440"> | **Optimization setup**: variables, objectives and constraints of a problem<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/26_optimization_define.gif" width="440"> |
-| **Equation-oriented optimization**: Pyomo model of the flowsheet solved with IPOPT<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/15_optimization_eo.gif" width="440"> | **Derivative-free optimization**: NSGA-II or Bayesian optimization on parallel workers<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/16_optimization_derivative_free.gif" width="440"> |
-| **Live optimization monitor**: NSGA-II cases on parallel workers, the Pareto front growing<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/24_optimization_nsga2_live.gif" width="440"> | **Case table**: every study case, with the optimum design loaded back into the model<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/36_optimization_cases.gif" width="440"> |
-| **Plant**: map blocks to plant modules and interlocks, see the plant graph<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/22_plant.gif" width="440"> | **Reaction network** (*later release*): the downhill energy diagram of a reaction network<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/12_reaction_downhill.gif" width="440"> |
-| **Reaction network prediction** (*later release*): the network from CO2 and an amine<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/28_reaction_network.gif" width="440"> | **Byproducts** (*later release*): probability and fate of the byproducts of the main route<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/29_reaction_byproducts.gif" width="440"> |
-| **Screening by reaction criteria** (*later release*): amines filtered by C-N bond energy, boiling point and pKa<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/30_screening_amines.gif" width="440"> | **Heat integration** (*later release*): grand composite curve and the network grid<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/17_heat_integration.gif" width="440"> |
-| **Heat integration with MVR** (*later release*): savings of the network and the vapor recompression table<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/25_heat_integration_mvr.gif" width="440"> | **TEA** (*later release*): cost charts of the solved process<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/18_evaluation_tea.gif" width="440"> |
-| **TEA setup** (*later release*): choose the units left out of the TEA and the heat integration<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/35_tea_configure_units.gif" width="440"> | **TEA sensitivity** (*later release*): tornado charts of the cost parameters<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/23_sensitivity_tea.gif" width="440"> |
-| **LCA** (*later release*): climate change by raw material, utility and emission<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/21_evaluation_lca.gif" width="440"> | **LCA sensitivity** (*later release*): distribution of the impacts over the uncertain parameters<br><img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/37_lca_sensitivity.gif" width="440"> |
+**AI assistant**: the assistant builds an acetone process step by step in the chat
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/02_ai_chat.gif" width="100%">
+
+**Agentic AI**: the AI assistant builds and runs a process from a request
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/20_ai_chat_builds_process.gif" width="100%">
+
+**Edit and undo**: every edit of the flowsheet can be undone
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/03_edit_undo.gif" width="100%">
+
+**Import and export**: open Aspen Plus and DWSIM files, write them back
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/04_import_export.gif" width="100%">
+
+**Built-in help (F1)**: the documentation of every block and method, with its equations
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/05_help.gif" width="100%">
+
+**Units**: switch the unit set of the whole model instantly
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/31_flowsheeting_units.gif" width="100%">
+
+**Components**: find components in the databanks installed on your computer
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/06_components_define.gif" width="100%">
+
+**Electrolyte wizard**: ions, salts and reactions of an electrolyte system
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/07_elec_wizard.gif" width="100%">
+
+**Property methods**: choose the base method of the model
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/34_property_method.gif" width="100%">
+
+**Property parameters**: view, import and estimate the parameters (*GNN estimation: later release*)
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/10_property_parameters.gif" width="100%">
+
+**Property analysis**: pure-component curves, Txy / Pxy, azeotropes
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/11_property_analysis.gif" width="100%">
+
+**Search by property**: screen molecules against property criteria
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/08_screening.gif" width="100%">
+
+**Portals**: links to public chemical databases and suppliers
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/09_portals.gif" width="100%">
+
+**API order**: order requests to chemical suppliers through their APIs
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/19_order_api_dry_run.gif" width="100%">
+
+**Flowsheeting**: automatic layout and name suggestions
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/13_flowsheeting.gif" width="100%">
+
+**Intellisense**: units and streams renamed by the naming convention
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/32_intellisense.gif" width="100%">
+
+**Reaction sets**: one Global check-box applies the chemistry to the whole model
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/27_reaction_define_global.gif" width="100%">
+
+**Solver settings**: convergence options and the dedicated column solver
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/33_simulation_solver.gif" width="100%">
+
+**Proxy run**: run the same model with Aspen Plus or DWSIM installed on your computer
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/14_simulation_proxy.gif" width="100%">
+
+**Optimization setup**: variables, objectives and constraints of a problem
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/26_optimization_define.gif" width="100%">
+
+**Equation-oriented optimization**: Pyomo model of the flowsheet solved with IPOPT
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/15_optimization_eo.gif" width="100%">
+
+**Derivative-free optimization**: NSGA-II or Bayesian optimization on parallel workers
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/16_optimization_derivative_free.gif" width="100%">
+
+**Live optimization monitor**: NSGA-II cases on parallel workers, the Pareto front growing
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/24_optimization_nsga2_live.gif" width="100%">
+
+**Case table**: every study case, with the optimum design loaded back into the model
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/36_optimization_cases.gif" width="100%">
+
+**Plant**: map blocks to plant modules and interlocks, see the plant graph
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/22_plant.gif" width="100%">
+
+**Reaction network** (*later release*): the downhill energy diagram of a reaction network
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/12_reaction_downhill.gif" width="100%">
+
+**Reaction network prediction** (*later release*): the network from CO2 and an amine
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/28_reaction_network.gif" width="100%">
+
+**Byproducts** (*later release*): probability and fate of the byproducts of the main route
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/29_reaction_byproducts.gif" width="100%">
+
+**Screening by reaction criteria** (*later release*): amines filtered by C-N bond energy, boiling point and pKa
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/30_screening_amines.gif" width="100%">
+
+**Heat integration** (*later release*): grand composite curve and the network grid
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/17_heat_integration.gif" width="100%">
+
+**Heat integration with MVR** (*later release*): savings of the network and the vapor recompression table
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/25_heat_integration_mvr.gif" width="100%">
+
+**TEA** (*later release*): cost charts of the solved process
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/18_evaluation_tea.gif" width="100%">
+
+**TEA setup** (*later release*): choose the units left out of the TEA and the heat integration
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/35_tea_configure_units.gif" width="100%">
+
+**TEA sensitivity** (*later release*): tornado charts of the cost parameters
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/23_sensitivity_tea.gif" width="100%">
+
+**LCA** (*later release*): climate change by raw material, utility and emission
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/21_evaluation_lca.gif" width="100%">
+
+**LCA sensitivity** (*later release*): distribution of the impacts over the uncertain parameters
+
+<img src="https://raw.githubusercontent.com/damdaepark/sargent/main/docs/gif/37_lca_sensitivity.gif" width="100%">
 
 ## Integrated features
 
