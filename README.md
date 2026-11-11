@@ -10,7 +10,7 @@ loop of a chemical process: flowsheet simulation, heat integration, optimization
 assessment, AI prediction of properties, and links to commercial simulators and to a physical plant.
 It runs many simulations at once, on the cores of one computer or on a cluster.
 
-> **Version 0.4** is the current public build. It contains the simulator, the optimizers, the simulator links and the
+> **Version 0.5** is the current public build. It contains the simulator, the optimizers, the simulator links and the
 > AI assistant. Heat exchanger network synthesis, TEA / LCA and the AI prediction models are not included in this
 > build; their buttons are shown but disabled. They will be enabled from version 1.0 on (see [Roadmap](#roadmap)).
 
@@ -165,7 +165,7 @@ public build yet.
 
 ## Integrated features
 
-| Feature | What it does | 0.4 |
+| Feature | What it does | 0.5 |
 |---|---|---|
 | **Flowsheet simulation** | Sequential-modular solver with automatic or user-chosen tear streams (Wegstein, Broyden, direct substitution) and compiled property kernels | Included |
 | **Proxy run** | Solve the same flowsheet with Aspen Plus or DWSIM installed on your computer and bring the results and errors back; import and export Aspen Plus and DWSIM files | Included |
@@ -190,7 +190,18 @@ public build yet.
 - Property analysis: pure-component curves, Txy / Pxy, ternary residue-curve maps, azeotrope search, phase
   envelopes
 
-What is new in 0.4:
+What is new in 0.5:
+
+- Property packages: one model can hold several named packages (for example NRTL-1 and a second NRTL with other
+  parameters), each with its own parameters, vapor phase and transport method. Every block chooses its package, and
+  Override copies parameters from one package to another.
+- Property > Define > Configure: one window for the packages and their thermodynamic parameters (pure, binary and
+  Henry), with import and export, the parameter file of each package and the source of every value.
+- A message tells which binary or Henry parameters a block needs and does not have, instead of a silent ideal pair.
+- Electrolytes: sturdier speciation of strong acids; the hydronium ion is the default when water is a component.
+- Revised design problems for seven of the example processes (`examples/turton_revised`).
+
+New in 0.4:
 
 - Linux wheels (x86-64) next to the Windows ones.
 - Property methods: UNIFAC (also for missing binary parameters), excess-Gibbs-energy mixing rules for equations of
